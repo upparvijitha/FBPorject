@@ -11,19 +11,19 @@ const bookSchema = new Schema(
         },
         author:{
             type:String,
-         required:true
+            required:true
         },
         description:{
             type:String,
-         required:true
+            required:true
         },
         price:{
             type:Number,
-         required:true
+            required:true
         },
         available:{
             type:Boolean,
-         required:true,
+            required:true,
         },
         image: {
             type:String,
