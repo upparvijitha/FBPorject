@@ -1,49 +1,19 @@
-
 const express = require("express");
 const mongoose = require("mongoose");
 const router = require("./routes/book-routes");
+
 const app = express();
 
-
-
-
+// Middlewares
 app.use(express.json());
-app.use("/books",router)
+app.use("/books", router); // localhost:5000/books
 
-//middleware
-// app.use('/',(req,res,next)=>
-// {
-//     res.send("this is starting app");
-// })
-
-
-
-
-
-
-
-mongoose.connect("mongodb+srv://admin:pUkxOcGhfS0CWwCR@cluster0.ocjk67p.mongodb.net/?retryWrites=true&w=majority")
-.then(()=>console.log("connected to the database"))
-.then(()=>{
-    app.listen(5000)
-}).catch((err)=>console.log( err));
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//pUkxOcGhfS0CWwCR
+mongoose
+  .connect(
+    "mongodb+srv://admin:Shiva%40123@cluster0.5yvzr.mongodb.net/?retryWrites=true&w=majority"
+  )
+  .then(() => console.log("Connected To Database"))
+  .then(() => {
+    app.listen(5000);
+  })
+  .catch((err) => console.log(err));
